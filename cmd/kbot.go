@@ -27,7 +27,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		telebotToken := os.Getenv("TELE_TOKEN")
-		fmt.Println("kbot %s started", appVersion)
+		fmt.Printf("kbot %s started\n", appVersion)
 		kbot, err := telebot.NewBot(telebot.Settings{
 			URL:    "",
 			Token:  telebotToken,
