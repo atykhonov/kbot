@@ -14,10 +14,6 @@ import (
 	telebot "gopkg.in/telebot.v3"
 )
 
-var (
-	telebotToken = os.Getenv("TELE_TOKEN")
-)
-
 // kbotCmd represents the kbot command
 var kbotCmd = &cobra.Command{
 	Use:     "kbot",
@@ -30,6 +26,7 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		telebotToken := os.Getenv("TELE_TOKEN")
 		fmt.Println("kbot %s started", appVersion)
 		kbot, err := telebot.NewBot(telebot.Settings{
 			URL:    "",
@@ -59,11 +56,10 @@ to quickly create a Cobra application.`,
 
 func init() {
 	// Load the .env file
-	err := godotenv.Load(".env")
+	err := godotenv.Load()
 	if err != nil {
 		log.Fatalf("Error loading .env file: %v", err)
 	}
-
 	rootCmd.AddCommand(kbotCmd)
 
 	// Here you will define your flags and configuration settings.
