@@ -50,10 +50,9 @@ Make `.env` file:
 cp .env.sample .env
 ```
 
-Update the `.env` file with the value of `TELE_TOKEN`.
+Update the `.env` file with the value of `TELE_TOKEN`, and start `kbot`:
 
 ```
-source .env
 ./kbot start
 ```
 
