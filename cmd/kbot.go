@@ -9,6 +9,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 	telebot "gopkg.in/telebot.v3"
 )
@@ -57,6 +58,12 @@ to quickly create a Cobra application.`,
 }
 
 func init() {
+	// Load the .env file
+	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatalf("Error loading .env file: %v", err)
+	}
+
 	rootCmd.AddCommand(kbotCmd)
 
 	// Here you will define your flags and configuration settings.
