@@ -14,7 +14,7 @@ import (
 )
 
 var (
-	telebotToken = os.Getenv("TELEBOT_TOKEN")
+	telebotToken = os.Getenv("TELE_TOKEN")
 )
 
 // kbotCmd represents the kbot command

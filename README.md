@@ -40,7 +40,7 @@ You: foobarbaz_bot
 BotFarther: Done! Congratulations on your new bot. [...]
 ```
 
-Among all other information, you should get a token to access the HTTP API. Copy it to use for `TELEBOT_TOKEN` environment variable in the next steps.
+Among all other information, you should get a token to access the HTTP API. Copy it to use for `TELE_TOKEN` environment variable in the next steps.
 
 ## Start the application
 
@@ -50,7 +50,7 @@ Make `.env` file:
 cp .env.sample .env
 ```
 
-Update the `.env` file with the value of `TELEBOT_TOKEN`.
+Update the `.env` file with the value of `TELE_TOKEN`.
 
 ```
 source .env
