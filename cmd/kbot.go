@@ -56,10 +56,8 @@ to quickly create a Cobra application.`,
 
 func init() {
 	// Load the .env file
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file: %v", err)
-	}
+	godotenv.Load()
+
 	rootCmd.AddCommand(kbotCmd)
 
 	// Here you will define your flags and configuration settings.
